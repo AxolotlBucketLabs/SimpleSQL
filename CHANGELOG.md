@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 2.0.0 - 2026-11-18
+
 - Move the PHP namespace to `AxolotlBucketLabs\SimpleSQL` and the Composer package to `axolotlbucketlabs/simple-sql`. Consumers must update imports and rebuild against the matching virion source.
 
 ## 1.1.1 - 2026-10-11
