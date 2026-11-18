@@ -7,11 +7,6 @@ SQL and YAML session storage virion for Axolotl-PM plugins
 [![License](https://img.shields.io/github/license/AxolotlBucketLabs/SimpleSQL)](https://github.com/AxolotlBucketLabs/SimpleSQL/blob/main/LICENSE)
 [![Discord](https://img.shields.io/discord/1568295845374206052?label=Discord&logo=discord&logoColor=white&color=5865F2)](https://discord.gg/Pk4FrNvHnM)
 
-## Migration from 1.x
-
-Version 2.0.0 changes the Composer package and PHP namespace. Update `nhanaz/simplesql` to `axolotlbucketlabs/simple-sql` and replace `NhanAZ\SimpleSQL\` imports with `AxolotlBucketLabs\SimpleSQL\`. The virion remains named `SimpleSQL`.
-
-
 ## How it works
 
 SimpleSQL uses [libasynql](https://github.com/poggit/libasynql) for asynchronous SQLite or MySQL queries. It loads the SQL row and YAML file before opening a session. The copy with the higher revision wins. If an offline YAML edit wins, SimpleSQL waits for the SQL synchronization to succeed before exposing the session. A failed SQL read leaves the session unopened and invokes the optional error callback.
