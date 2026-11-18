@@ -1,5 +1,5 @@
 {
-  "name": "nhanaz/simplesql",
+  "name": "axolotlbucketlabs/simple-sql",
   "type": "library",
   "description": "Hybrid SQL-YAML data management library for PocketMine-MP. Combines SQL performance with YAML user-friendliness.",
   "license": "MIT",
@@ -38,7 +38,7 @@
   "extra": {
     "virion": {
       "spec": "3.0",
-      "namespace-root": "NhanAZ\\SimpleSQL",
+      "namespace-root": "AxolotlBucketLabs\\SimpleSQL",
       "exclude-root-resources": true
     }
   }

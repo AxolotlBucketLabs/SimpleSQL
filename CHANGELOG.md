@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased
+
+- Move the PHP namespace to `AxolotlBucketLabs\SimpleSQL` and the Composer package to `axolotlbucketlabs/simple-sql`. Consumers must update imports and rebuild against the matching virion source.
+
 ## 1.1.1 - 2026-10-11
 
 - Confirm single and paired SQL saves by reading the written rows on the same database worker before changing sessions or queuing YAML mirrors.

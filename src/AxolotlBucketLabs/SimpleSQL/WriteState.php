@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace NhanAZ\SimpleSQL;
+namespace AxolotlBucketLabs\SimpleSQL;
 
 /**
  * Represents the write state of a single session ID in the WriteScheduler.

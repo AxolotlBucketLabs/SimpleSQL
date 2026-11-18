@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-use NhanAZ\SimpleSQL\PendingSession;
-use NhanAZ\SimpleSQL\Session;
-use NhanAZ\SimpleSQL\SimpleSQL;
-use NhanAZ\SimpleSQL\SqlRowDecoder;
+use AxolotlBucketLabs\SimpleSQL\PendingSession;
+use AxolotlBucketLabs\SimpleSQL\Session;
+use AxolotlBucketLabs\SimpleSQL\SimpleSQL;
+use AxolotlBucketLabs\SimpleSQL\SqlRowDecoder;
 
-require dirname(__DIR__) . "/src/NhanAZ/SimpleSQL/SimpleSQL.php";
-require dirname(__DIR__) . "/src/NhanAZ/SimpleSQL/PendingSession.php";
-require dirname(__DIR__) . "/src/NhanAZ/SimpleSQL/Session.php";
-require dirname(__DIR__) . "/src/NhanAZ/SimpleSQL/SqlRowDecoder.php";
+require dirname(__DIR__) . "/src/AxolotlBucketLabs/SimpleSQL/SimpleSQL.php";
+require dirname(__DIR__) . "/src/AxolotlBucketLabs/SimpleSQL/PendingSession.php";
+require dirname(__DIR__) . "/src/AxolotlBucketLabs/SimpleSQL/Session.php";
+require dirname(__DIR__) . "/src/AxolotlBucketLabs/SimpleSQL/SqlRowDecoder.php";
 
 final class AbortProbe extends SimpleSQL {
 	/** @var list<string> */

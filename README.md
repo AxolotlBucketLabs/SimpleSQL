@@ -2,10 +2,14 @@
 
 SQL and YAML session storage virion for Axolotl-PM plugins
 
-[![CI](https://github.com/NhanAZ-Libraries/SimpleSQL/actions/workflows/validate.yml/badge.svg)](https://github.com/NhanAZ-Libraries/SimpleSQL/actions/workflows/validate.yml)
-[![Latest release](https://img.shields.io/github/v/release/NhanAZ-Libraries/SimpleSQL)](https://github.com/NhanAZ-Libraries/SimpleSQL/releases/latest)
-[![License](https://img.shields.io/github/license/NhanAZ-Libraries/SimpleSQL)](https://github.com/NhanAZ-Libraries/SimpleSQL/blob/main/LICENSE)
-[![Discord](https://img.shields.io/discord/986553214889517088?label=Discord&logo=discord&logoColor=white&color=5865F2)](https://discord.gg/j2X83ujT6c)
+[![CI](https://github.com/AxolotlBucketLabs/SimpleSQL/actions/workflows/validate.yml/badge.svg)](https://github.com/AxolotlBucketLabs/SimpleSQL/actions/workflows/validate.yml)
+[![Latest release](https://img.shields.io/github/v/release/AxolotlBucketLabs/SimpleSQL)](https://github.com/AxolotlBucketLabs/SimpleSQL/releases/latest)
+[![License](https://img.shields.io/github/license/AxolotlBucketLabs/SimpleSQL)](https://github.com/AxolotlBucketLabs/SimpleSQL/blob/main/LICENSE)
+[![Discord](https://img.shields.io/discord/1568295845374206052?label=Discord&logo=discord&logoColor=white&color=5865F2)](https://discord.gg/Pk4FrNvHnM)
+
+## Migration from 1.x
+
+Version 2.0.0 changes the Composer package and PHP namespace. Update `nhanaz/simplesql` to `axolotlbucketlabs/simple-sql` and replace `NhanAZ\SimpleSQL\` imports with `AxolotlBucketLabs\SimpleSQL\`. The virion remains named `SimpleSQL`.
 
 
 ## How it works
@@ -24,9 +28,9 @@ The `virion.yml` minimum is API `5.0.0`. The [validation workflow](.github/workf
 
 ## Installation and build
 
-Add [SimpleSQL source](https://github.com/NhanAZ-Libraries/SimpleSQL/releases) and libasynql to the virion inputs of your plugin build. Include both SQL resource files from [`resources/simplesql`](resources/simplesql) at the same paths in your plugin. SimpleSQL is a library inside the resulting plugin PHAR, not a standalone server plugin.
+Add [SimpleSQL source](https://github.com/AxolotlBucketLabs/SimpleSQL/releases) and libasynql to the virion inputs of your plugin build. Include both SQL resource files from [`resources/simplesql`](resources/simplesql) at the same paths in your plugin. SimpleSQL is a library inside the resulting plugin PHAR, not a standalone server plugin.
 
-Use [DevTools](https://github.com/NhanAZ/DevTools) to build and validate the plugin PHAR. Pin the virion sources and DevTools revision in your build workflow so that the artifact can be reproduced. The [SimpleEconomy build workflow](https://github.com/NhanAZ-Plugins/SimpleEconomy/blob/main/.github/workflows/build.yml) shows one consumer configuration, but its pinned revisions should be reviewed before reuse.
+Use [DevTools](https://github.com/AxolotlBucketLabs/DevTools) to build and validate the plugin PHAR. Pin the virion sources and DevTools revision in your build workflow so that the artifact can be reproduced. The [SimpleEconomy build workflow](https://github.com/AxolotlBucketLabs/SimpleEconomy/blob/main/.github/workflows/build.yml) shows one consumer configuration.
 
 The plugin must contain these resources.
 
@@ -52,8 +56,8 @@ Refer to [libasynql](https://github.com/poggit/libasynql) for MySQL configuratio
 Create the manager in `onEnable()` and close it in `onDisable()`. Validate the database configuration before passing it to `create()`.
 
 ```php
-use NhanAZ\SimpleSQL\Session;
-use NhanAZ\SimpleSQL\SimpleSQL;
+use AxolotlBucketLabs\SimpleSQL\Session;
+use AxolotlBucketLabs\SimpleSQL\SimpleSQL;
 
 $database = $this->getConfig()->get("database");
 if (!is_array($database)) {
@@ -117,4 +121,4 @@ The regression scripts test load failure barriers, ordered saves, paired-write r
 
 ## Support and license
 
-Report defects through [GitHub Issues](https://github.com/NhanAZ-Libraries/SimpleSQL/issues) or [NhanAZ Discord](https://discord.gg/j2X83ujT6c). SimpleSQL is licensed under the [MIT License](LICENSE). libasynql has its own license and must retain its notices when bundled.
+Report defects through [GitHub Issues](https://github.com/AxolotlBucketLabs/SimpleSQL/issues) or the [AxolotlBucketLabs Discord](https://discord.gg/Pk4FrNvHnM). SimpleSQL is licensed under the [MIT License](LICENSE). libasynql has its own license and must retain its notices when bundled.

@@ -21,17 +21,17 @@ namespace poggit\libasynql\result {
 }
 
 namespace {
-	use NhanAZ\SimpleSQL\Session;
-	use NhanAZ\SimpleSQL\SimpleSQL;
-	use NhanAZ\SimpleSQL\WriteScheduler;
+	use AxolotlBucketLabs\SimpleSQL\Session;
+	use AxolotlBucketLabs\SimpleSQL\SimpleSQL;
+	use AxolotlBucketLabs\SimpleSQL\WriteScheduler;
 	use poggit\libasynql\DataConnector;
 	use poggit\libasynql\SqlError;
 	use poggit\libasynql\result\SqlSelectResult;
 
-	require dirname(__DIR__) . "/src/NhanAZ/SimpleSQL/SimpleSQL.php";
-	require dirname(__DIR__) . "/src/NhanAZ/SimpleSQL/Session.php";
-	require dirname(__DIR__) . "/src/NhanAZ/SimpleSQL/WriteState.php";
-	require dirname(__DIR__) . "/src/NhanAZ/SimpleSQL/WriteScheduler.php";
+	require dirname(__DIR__) . "/src/AxolotlBucketLabs/SimpleSQL/SimpleSQL.php";
+	require dirname(__DIR__) . "/src/AxolotlBucketLabs/SimpleSQL/Session.php";
+	require dirname(__DIR__) . "/src/AxolotlBucketLabs/SimpleSQL/WriteState.php";
+	require dirname(__DIR__) . "/src/AxolotlBucketLabs/SimpleSQL/WriteScheduler.php";
 
 	final class DeferredSql implements DataConnector {
 		/** @var list<array{name: string, args: array, success: callable, error: callable}> */

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace NhanAZ\SimpleSQL;
+namespace AxolotlBucketLabs\SimpleSQL;
 
 use JsonException;
 use UnexpectedValueException;

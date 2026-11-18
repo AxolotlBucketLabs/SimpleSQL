@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace NhanAZ\SimpleSQL;
+namespace AxolotlBucketLabs\SimpleSQL;
 
 use Closure;
 use Logger;
-use NhanAZ\SimpleSQL\task\TickTask;
-use NhanAZ\SimpleSQL\task\YamlLoadTask;
-use NhanAZ\SimpleSQL\task\YamlWriteTask;
+use AxolotlBucketLabs\SimpleSQL\task\TickTask;
+use AxolotlBucketLabs\SimpleSQL\task\YamlLoadTask;
+use AxolotlBucketLabs\SimpleSQL\task\YamlWriteTask;
 use pocketmine\plugin\PluginBase;
 use pocketmine\scheduler\TaskHandler;
 use pocketmine\Server;

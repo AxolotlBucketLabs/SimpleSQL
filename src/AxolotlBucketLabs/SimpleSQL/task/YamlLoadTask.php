@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace NhanAZ\SimpleSQL\task;
+namespace AxolotlBucketLabs\SimpleSQL\task;
 
 use Closure;
 use pocketmine\scheduler\AsyncTask;
